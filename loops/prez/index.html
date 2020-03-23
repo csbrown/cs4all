@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Python Loops</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+        <link rel="stylesheet" href="css/style.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        <script src="lib/js/d3.js"></script>
+        <script src="lib/js/jquery-3.4.1.min.js"></script>
+        <script src="lib/js/jquery.csv.js"></script> 
+        <script src="lib/js/math.min.js"></script> 
+        <script src="lib/js/dat.gui.js"></script> 
+        <script src="lib/js/tween.umd.js"></script> 
+        <script src="js/reveal.helpers.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section data-timing="60">
+                    <div style="height: 20vh;"></div>
+                    <h2> Repeating Stuff </h2> 
+                    <h3> Episode 1: Loops </h3>
+ 
+                </section><section>
+                    <div> <h4> Laziness: The coder's virtue </h4> </div>
+                    <div class="texty lefty"> 
+                        <ol>
+                            <li> A lazy coder wants less work </li>
+                            <li class="fragment"> so they automate repetitition </li> 
+                            <li class="fragment"> ... which was their job </li>
+                            <li class="fragment"> ∴ lazy coder == good coder </li>
+                        </ol>
+                    </div>
+                    <div class="righty">
+                        <img class="plain" style="border:0px" src="./static/jerry_envelopes.gif">
+                    </div>
+                </section>
+
+                </section><section>
+                    <div> <h4> More motivation: Turtle! </h4> </div>
+                    <div class="texty whole"> 
+                        <ul>
+                            <li> <a href="https://www.google.com/fbx?fbx=snake_arcade">go play "snake" later</a> </li>
+                            <li> <a href="./resources/turtle_snake.py">mockup for turtle snake</a> </li> 
+                        </ul>
+                    </div>
+                </section>
+
+                </section><section>
+                    <iframe frameborder="0" width="100%" height="100%" src="https://repl.it/@csbrown/UnfinishedCooperativeCharacters?lite=true"></iframe>
+                </section>
+                
+                </section><section>
+                    <div> <h4> For vs While: Me code pretty one day </h4> </div>
+                    <div class="texty whole"> 
+                        <ul>
+                            <li> The computer doesn't care! </li>
+                            <li class="fragment"> ALWAYS REMEMBER: Your code *will* be read by &ge; 1 human </li> 
+                        </ul>
+                    </div>
+                </section>
+
+                </section><section>
+                    <iframe frameborder="0" width="100%" height="100%" src="https://repl.it/@csbrown/UnfinishedCooperativeCharacters?lite=true"></iframe>
+                </section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                width: "100%",
+                height: "100%",
+                margin: 0.1,
+                minScale: 1,
+                maxScale: 1,
+                hash: true,
+                center: false,
+                controls: true,
+                help: false,
+                pdfSeparateFragments: false,
+                transition: "none",
+                defaultTiming: 0,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

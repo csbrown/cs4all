@@ -29,8 +29,10 @@
         <script src="lib/js/dat.gui.js"></script> 
         <script src="lib/js/tween.umd.js"></script> 
         <script src="js/reveal.helpers.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
 	</head>
 	<body>
+        <canvas id="drawer" class="full" style="z-index: 0;"></canvas>
 		<div class="reveal">
 			<div class="slides">
                 <section data-timing="60">
@@ -138,5 +140,22 @@
 				]
 			});
 		</script>
+        <script>
+            var full_drawpad_canvas = document.getElementById("drawer");
+            var full_drawpad = new SignaturePad(full_drawpad_canvas, {penColor: "rgb(255,0,0)"});
+            function drawListener(e) {
+                if (e.code === "KeyC") full_drawpad.clear();
+                if (e.code === "KeyM") $(full_drawpad_canvas).css('z-index', (($(full_drawpad_canvas).css('z-index')/1000+1)%2)*1000)
+            }
+            document.addEventListener('keydown', drawListener);
+            function resizeCanvas() {
+                full_drawpad_canvas.width = full_drawpad_canvas.clientWidth;
+                full_drawpad_canvas.height = full_drawpad_canvas.clientHeight;
+                full_drawpad.clear();
+            }
+
+            window.addEventListener("resize", resizeCanvas);
+            resizeCanvas();
+        </script>
 	</body>
 </html>
